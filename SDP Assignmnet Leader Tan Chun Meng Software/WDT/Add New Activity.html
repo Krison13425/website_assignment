@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Mr. Smash</title>
+		<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		
+		<link rel="stylesheet" href="sidebar.css">
+	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+	</head>
+	<body>
+	<div class="menu-btn">
+     <i class="fas fa-bars"></i>
+   </div>
+	<div class="side-bar">
+     <div class="close-btn">
+     <i class="fas fa-times"></i>
+     </div>
+     <div class="menu">
+	 
+	 <div class="item"><a href="staff_page.php"><i class="fas fa-home"></i>Home</a></div>
+	 
+       <div class="item">
+         <a class="sub-btn"><i class="fab fa-product-hunt"></i>Item<i class="fas fa-angle-right dropdown"></i></a>
+         <div class="sub-menu">
+           <a href="Add New Item.html" class="sub-item">Add New Item</a>
+           <a href="Item List.php" class="sub-item">Update Item</a>
+         </div>
+       </div>
+	   
+	   <div class="item">
+         <a class="sub-btn"><i class="fas fa-dumbbell"></i>Activity<i class="fas fa-angle-right dropdown"></i></a>
+         <div class="sub-menu">
+           <a href="Add New Activity.html" class="sub-item">Add New Activity</a>
+           <a href="Activity List.php" class="sub-item">Update Activity</a>
+         </div>
+       </div>
+	   
+       <div class="item"><a href="View Customer Booking List.php"><i class="fas fa-tasks"></i>View Booking List</a></div>
+	   
+	   <div class="item"><a href="View Customer Payment Status List.php"><i class="fas fa-tasks"></i>Payment Status List</a></div>
+	   
+	    <div class="item"><a href="Book Now.php"><i class="fas fa-calendar-check"></i>Book Now</a></div>
+		
+		<div class="item"><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></div>
+       
+	   </div>
+	   
+     </div>
+	 
+	<div class="box">
+		<h2 style="font-family: 'Permanent Marker', cursive; color: gold; font-size:30px;">Add New Activity</h2><br>
+		<form action="Insert Activity.php" method="post" enctype="multipart/form-data">
+			
+			
+			<div class="inputBox">
+				<input type ="text" name ="name" required required  pattern="^[a-zA-Z-]{0,30}$" title="No Number Allowed!! Please provide a correct name">
+				<label>Name</label>
+			</div>
+			
+			<div class="inputBox">
+				<input type="text" name="price"  pattern="^[0-9.]{0,5}$"   oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "5" required="required">
+				<label>Price</label>
+			</div>
+			
+			<div class="inputBox">
+				<input type="text" name="time" required="required">
+				<label>Operating Time</label>
+			</div>
+			
+			<div class="inputBox">
+				<label>Activity Description</label><br><br>
+				<textarea name="description" required="required"></textarea><br><br>
+			</div>
+			
+			<div class="inputBox">
+				<label>Activity Picture</label><br><br>
+				<input type = "file" name = "Item_Pic" required = "requried">
+			</div>
+
+			<center><input type="submit" value="Add" name="submit"></center>
+		<div>
+		</form>
+	</div>
+	
+	<script type="text/javascript">
+   $(document).ready(function(){
+
+     $('.sub-btn').click(function(){
+       $(this).next('.sub-menu').slideToggle();
+       $(this).find('.dropdown').toggleClass('rotate');
+     });
+
+
+     $('.menu-btn').click(function(){
+       $('.side-bar').addClass('active');
+       $('.menu-btn').css("visibility", "hidden");
+     });
+
+     $('.close-btn').click(function(){
+       $('.side-bar').removeClass('active');
+       $('.menu-btn').css("visibility", "visible");
+     });
+   });
+   </script>
+	</body>
+</html>

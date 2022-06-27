@@ -1,0 +1,25 @@
+.Home img{
+	float:center;
+	width:300px;
+	
+}
+
+h3{
+	font-family: 'Permanent Marker', cursive;
+	font-size: 100px;
+	color: gold;
+}
+.About img{
+	float:center;
+	width:300px;
+	
+}
+p{
+	font-family: 'Permanent Marker', cursive;
+	font-size: 40px;
+	color: gold;
+}
+.Contact img{
+	float:center;
+	width:900px;
+}

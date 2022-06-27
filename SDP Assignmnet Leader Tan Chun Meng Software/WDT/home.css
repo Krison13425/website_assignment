@@ -1,0 +1,138 @@
+body {
+font-family: 'Raleway', sans-serif;
+margin:0;
+padding:0;
+background: url(bg.jpg);
+background-size: cover;
+	}
+.box {
+float:left;
+margin:10px;
+padding:10px;
+width:500px;
+height:400px;
+background-color:#808080;
+border-radius:10px;
+text-align:center;
+}
+.container{
+	width:900px;
+	background-color: #fff;
+	padding: 30px;
+}
+
+.box img{
+	display: block;
+	margin: 0 auto;
+	width: 70%;
+	height:65%;
+	position: relative;
+	top: 5%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #888;
+  width: 60%;
+  height:75%;
+  border-radius:15px;
+}
+.item {
+	text-align:center;
+	
+}
+
+
+.modal-content img{
+	width: 600px;
+	position: relative;
+	left:30%;
+	top:70%;
+	bottom:80%;
+	right:25%;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+h3{
+	font-family: 'Permanent Marker', cursive;
+	font-size: 20px;
+}
+
+.btn{
+	border: 1px solid #FFD700;
+	background: none;
+	padding: 5px 10px;
+	font-size: 20px;
+	font-family: 'montserrat';
+	cursor: pointer;
+	margin:5px;
+	transition: 0.8s;
+	position: relative;
+	overflow: hidden;
+	border-radius:25px;
+}
+
+.btn1{
+	color:#808080;
+}
+
+.btn2{
+	color:#666;
+}
+
+.btn1:hover,.btn2:hover{
+	color: #FFD700;
+}
+
+.btn::before{
+	content:"";
+	position: absolute;
+	left:0;
+	width:100%;
+	height:0%;
+	background:#FFD700;
+	z-index: -1;
+	transition: 0.8s;
+}
+
+.btn1::before,.btn2::before{
+	bottom:0;
+	border-radius: 50% 50% 0 0;
+}
+ .btn1::before,.btn2::before{
+	 height:180%;
+ }
+
+.btn1:hover::before,.btn2:hover::before{
+	height: 0%;
+}
